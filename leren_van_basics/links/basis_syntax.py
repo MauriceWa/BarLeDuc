@@ -1,5 +1,5 @@
 from time import sleep
-
+import random
 
 # def main():
 #     eerste_vraag = int(input("Hallo, hoe oud bent je?"))
@@ -53,11 +53,15 @@ def vraag():
 
 
 def dict():
-    dict = [0, 5, 9]
-    print(dict.append(1))
+    dict = {'a': 0, 'b': 5, 'c': 9, 'd': 1, 'e': 2, 'f': 10, 'g': 25}
+    for item in range(25):
+        item = random.choice(list(dict))
+        print(item, dict[item])
+        sleep(1800)
 
 def main():
 
+    dict()
     vraag()
 
 if __name__ == "__main__":
