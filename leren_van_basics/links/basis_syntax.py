@@ -52,16 +52,17 @@ def vraag():
             print("Voer een getal in.")
 
 
-def dict():
-    dict = {'a': 0, 'b': 5, 'c': 9, 'd': 1, 'e': 2, 'f': 10, 'g': 25}
-    for item in range(25):
-        item = random.choice(list(dict))
-        print(item, dict[item])
+def dictie():
+    dictio = {'a': 0, 'b': 5, 'c': 9, 'd': 1, 'e': 2, 'f': 10, 'g': 25}
+    for item in range(len(dictio)):
+        item = random.choice(list(dictio))
+        print(item, dictio[item])
+        del dictio[item]
         sleep(1800)
 
 def main():
 
-    dict()
+    dictie()
     vraag()
 
 if __name__ == "__main__":
