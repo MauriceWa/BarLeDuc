@@ -56,12 +56,13 @@ def vraag():
 def dictie():
     dictio = {'a': 0, 'b': 5, 'c': 9, 'd': 1, 'e': 2, 'f': 10, 'g': 25}
     with open("pravda", 'w', newline='') as bestand:
-        
-    for item in range(len(dictio)):
-        item = random.choice(list(dictio))
-        print(item, dictio[item])
-        del dictio[item]
-        sleep(3)
+        schrijver = csv.writer(bestand)
+        for letter, cijfer in dictio.items():
+            item = random.choice(list(dictio))
+            schrijver.writerow([letter, cijfer])
+            print(letter, cijfer)
+            del dictio[item]
+            sleep(3)
 
 def main():
 
